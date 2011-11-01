@@ -1,0 +1,3 @@
+{
+    "cmd": ["love", "$file_path"]
+}
