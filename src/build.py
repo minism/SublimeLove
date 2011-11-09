@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-
-#
 import sys
 import os
 import plistlib
@@ -81,7 +79,7 @@ if __name__ == '__main__':
         lua_syntax = sys.argv[1]
 
     if not os.path.exists(lua_syntax):
-        print 'Lua syntax file not found.  Try passing it as an argument'
+        print 'Lua.tmLanguage not found.  Try passing it as an argument'
         sys.exit(1)
 
     main()
