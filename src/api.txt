@@ -1,15 +1,3 @@
-love.draw
-love.focus
-love.joystickpressed
-love.joystickreleased
-love.keypressed
-love.keyreleased
-love.load
-love.mousepressed
-love.mousereleased
-love.quit
-love.run
-love.update
 
 love.audio.getNumSources
 love.audio.getOrientation
