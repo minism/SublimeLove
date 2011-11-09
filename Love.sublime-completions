@@ -1,0 +1,677 @@
+{
+    "completions": [
+        {
+            "contents": "love.audio.getNumSources($0)", 
+            "trigger": "love.audio.getNumSources"
+        }, 
+        {
+            "contents": "love.audio.getOrientation($0)", 
+            "trigger": "love.audio.getOrientation"
+        }, 
+        {
+            "contents": "love.audio.getPosition($0)", 
+            "trigger": "love.audio.getPosition"
+        }, 
+        {
+            "contents": "love.audio.getVelocity($0)", 
+            "trigger": "love.audio.getVelocity"
+        }, 
+        {
+            "contents": "love.audio.getVolume($0)", 
+            "trigger": "love.audio.getVolume"
+        }, 
+        {
+            "contents": "love.audio.newSource($0)", 
+            "trigger": "love.audio.newSource"
+        }, 
+        {
+            "contents": "love.audio.pause($0)", 
+            "trigger": "love.audio.pause"
+        }, 
+        {
+            "contents": "love.audio.play($0)", 
+            "trigger": "love.audio.play"
+        }, 
+        {
+            "contents": "love.audio.resume($0)", 
+            "trigger": "love.audio.resume"
+        }, 
+        {
+            "contents": "love.audio.rewind($0)", 
+            "trigger": "love.audio.rewind"
+        }, 
+        {
+            "contents": "love.audio.setOrientation($0)", 
+            "trigger": "love.audio.setOrientation"
+        }, 
+        {
+            "contents": "love.audio.setPosition($0)", 
+            "trigger": "love.audio.setPosition"
+        }, 
+        {
+            "contents": "love.audio.setVelocity($0)", 
+            "trigger": "love.audio.setVelocity"
+        }, 
+        {
+            "contents": "love.audio.setVolume($0)", 
+            "trigger": "love.audio.setVolume"
+        }, 
+        {
+            "contents": "love.audio.stop($0)", 
+            "trigger": "love.audio.stop"
+        }, 
+        {
+            "contents": "love.event.clear($0)", 
+            "trigger": "love.event.clear"
+        }, 
+        {
+            "contents": "love.event.poll($0)", 
+            "trigger": "love.event.poll"
+        }, 
+        {
+            "contents": "love.event.pump($0)", 
+            "trigger": "love.event.pump"
+        }, 
+        {
+            "contents": "love.event.push($0)", 
+            "trigger": "love.event.push"
+        }, 
+        {
+            "contents": "love.event.wait($0)", 
+            "trigger": "love.event.wait"
+        }, 
+        {
+            "contents": "love.filesystem.enumerate($0)", 
+            "trigger": "love.filesystem.enumerate"
+        }, 
+        {
+            "contents": "love.filesystem.exists($0)", 
+            "trigger": "love.filesystem.exists"
+        }, 
+        {
+            "contents": "love.filesystem.getAppdataDirectory($0)", 
+            "trigger": "love.filesystem.getAppdataDirectory"
+        }, 
+        {
+            "contents": "love.filesystem.getLastModified($0)", 
+            "trigger": "love.filesystem.getLastModified"
+        }, 
+        {
+            "contents": "love.filesystem.getSaveDirectory($0)", 
+            "trigger": "love.filesystem.getSaveDirectory"
+        }, 
+        {
+            "contents": "love.filesystem.getUserDirectory($0)", 
+            "trigger": "love.filesystem.getUserDirectory"
+        }, 
+        {
+            "contents": "love.filesystem.getWorkingDirectory($0)", 
+            "trigger": "love.filesystem.getWorkingDirectory"
+        }, 
+        {
+            "contents": "love.filesystem.init($0)", 
+            "trigger": "love.filesystem.init"
+        }, 
+        {
+            "contents": "love.filesystem.isDirectory($0)", 
+            "trigger": "love.filesystem.isDirectory"
+        }, 
+        {
+            "contents": "love.filesystem.isFile($0)", 
+            "trigger": "love.filesystem.isFile"
+        }, 
+        {
+            "contents": "love.filesystem.lines($0)", 
+            "trigger": "love.filesystem.lines"
+        }, 
+        {
+            "contents": "love.filesystem.load($0)", 
+            "trigger": "love.filesystem.load"
+        }, 
+        {
+            "contents": "love.filesystem.mkdir($0)", 
+            "trigger": "love.filesystem.mkdir"
+        }, 
+        {
+            "contents": "love.filesystem.newFile($0)", 
+            "trigger": "love.filesystem.newFile"
+        }, 
+        {
+            "contents": "love.filesystem.newFileData($0)", 
+            "trigger": "love.filesystem.newFileData"
+        }, 
+        {
+            "contents": "love.filesystem.read($0)", 
+            "trigger": "love.filesystem.read"
+        }, 
+        {
+            "contents": "love.filesystem.remove($0)", 
+            "trigger": "love.filesystem.remove"
+        }, 
+        {
+            "contents": "love.filesystem.setIdentity($0)", 
+            "trigger": "love.filesystem.setIdentity"
+        }, 
+        {
+            "contents": "love.filesystem.setSource($0)", 
+            "trigger": "love.filesystem.setSource"
+        }, 
+        {
+            "contents": "love.filesystem.write($0)", 
+            "trigger": "love.filesystem.write"
+        }, 
+        {
+            "contents": "love.font.newFontData($0)", 
+            "trigger": "love.font.newFontData"
+        }, 
+        {
+            "contents": "love.font.newGlyphData($0)", 
+            "trigger": "love.font.newGlyphData"
+        }, 
+        {
+            "contents": "love.font.newRasterizer($0)", 
+            "trigger": "love.font.newRasterizer"
+        }, 
+        {
+            "contents": "love.graphics.checkMode($0)", 
+            "trigger": "love.graphics.checkMode"
+        }, 
+        {
+            "contents": "love.graphics.circle($0)", 
+            "trigger": "love.graphics.circle"
+        }, 
+        {
+            "contents": "love.graphics.clear($0)", 
+            "trigger": "love.graphics.clear"
+        }, 
+        {
+            "contents": "love.graphics.draw($0)", 
+            "trigger": "love.graphics.draw"
+        }, 
+        {
+            "contents": "love.graphics.drawq($0)", 
+            "trigger": "love.graphics.drawq"
+        }, 
+        {
+            "contents": "love.graphics.getBackgroundColor($0)", 
+            "trigger": "love.graphics.getBackgroundColor"
+        }, 
+        {
+            "contents": "love.graphics.getBlendMode($0)", 
+            "trigger": "love.graphics.getBlendMode"
+        }, 
+        {
+            "contents": "love.graphics.getCaption($0)", 
+            "trigger": "love.graphics.getCaption"
+        }, 
+        {
+            "contents": "love.graphics.getColor($0)", 
+            "trigger": "love.graphics.getColor"
+        }, 
+        {
+            "contents": "love.graphics.getColorMode($0)", 
+            "trigger": "love.graphics.getColorMode"
+        }, 
+        {
+            "contents": "love.graphics.getFont($0)", 
+            "trigger": "love.graphics.getFont"
+        }, 
+        {
+            "contents": "love.graphics.getHeight($0)", 
+            "trigger": "love.graphics.getHeight"
+        }, 
+        {
+            "contents": "love.graphics.getLineStipple($0)", 
+            "trigger": "love.graphics.getLineStipple"
+        }, 
+        {
+            "contents": "love.graphics.getLineStyle($0)", 
+            "trigger": "love.graphics.getLineStyle"
+        }, 
+        {
+            "contents": "love.graphics.getLineWidth($0)", 
+            "trigger": "love.graphics.getLineWidth"
+        }, 
+        {
+            "contents": "love.graphics.getMaxPointSize($0)", 
+            "trigger": "love.graphics.getMaxPointSize"
+        }, 
+        {
+            "contents": "love.graphics.getModes($0)", 
+            "trigger": "love.graphics.getModes"
+        }, 
+        {
+            "contents": "love.graphics.getPointSize($0)", 
+            "trigger": "love.graphics.getPointSize"
+        }, 
+        {
+            "contents": "love.graphics.getPointStyle($0)", 
+            "trigger": "love.graphics.getPointStyle"
+        }, 
+        {
+            "contents": "love.graphics.getScissor($0)", 
+            "trigger": "love.graphics.getScissor"
+        }, 
+        {
+            "contents": "love.graphics.getWidth($0)", 
+            "trigger": "love.graphics.getWidth"
+        }, 
+        {
+            "contents": "love.graphics.isCreated($0)", 
+            "trigger": "love.graphics.isCreated"
+        }, 
+        {
+            "contents": "love.graphics.line($0)", 
+            "trigger": "love.graphics.line"
+        }, 
+        {
+            "contents": "love.graphics.newFont($0)", 
+            "trigger": "love.graphics.newFont"
+        }, 
+        {
+            "contents": "love.graphics.newFramebuffer($0)", 
+            "trigger": "love.graphics.newFramebuffer"
+        }, 
+        {
+            "contents": "love.graphics.newImage($0)", 
+            "trigger": "love.graphics.newImage"
+        }, 
+        {
+            "contents": "love.graphics.newImageFont($0)", 
+            "trigger": "love.graphics.newImageFont"
+        }, 
+        {
+            "contents": "love.graphics.newParticleSystem($0)", 
+            "trigger": "love.graphics.newParticleSystem"
+        }, 
+        {
+            "contents": "love.graphics.newQuad($0)", 
+            "trigger": "love.graphics.newQuad"
+        }, 
+        {
+            "contents": "love.graphics.newScreenshot($0)", 
+            "trigger": "love.graphics.newScreenshot"
+        }, 
+        {
+            "contents": "love.graphics.newSpriteBatch($0)", 
+            "trigger": "love.graphics.newSpriteBatch"
+        }, 
+        {
+            "contents": "love.graphics.point($0)", 
+            "trigger": "love.graphics.point"
+        }, 
+        {
+            "contents": "love.graphics.polygon($0)", 
+            "trigger": "love.graphics.polygon"
+        }, 
+        {
+            "contents": "love.graphics.pop($0)", 
+            "trigger": "love.graphics.pop"
+        }, 
+        {
+            "contents": "love.graphics.present($0)", 
+            "trigger": "love.graphics.present"
+        }, 
+        {
+            "contents": "love.graphics.print($0)", 
+            "trigger": "love.graphics.print"
+        }, 
+        {
+            "contents": "love.graphics.printf($0)", 
+            "trigger": "love.graphics.printf"
+        }, 
+        {
+            "contents": "love.graphics.push($0)", 
+            "trigger": "love.graphics.push"
+        }, 
+        {
+            "contents": "love.graphics.quad($0)", 
+            "trigger": "love.graphics.quad"
+        }, 
+        {
+            "contents": "love.graphics.rectangle($0)", 
+            "trigger": "love.graphics.rectangle"
+        }, 
+        {
+            "contents": "love.graphics.reset($0)", 
+            "trigger": "love.graphics.reset"
+        }, 
+        {
+            "contents": "love.graphics.rotate($0)", 
+            "trigger": "love.graphics.rotate"
+        }, 
+        {
+            "contents": "love.graphics.scale($0)", 
+            "trigger": "love.graphics.scale"
+        }, 
+        {
+            "contents": "love.graphics.setBackgroundColor($0)", 
+            "trigger": "love.graphics.setBackgroundColor"
+        }, 
+        {
+            "contents": "love.graphics.setBlendMode($0)", 
+            "trigger": "love.graphics.setBlendMode"
+        }, 
+        {
+            "contents": "love.graphics.setCaption($0)", 
+            "trigger": "love.graphics.setCaption"
+        }, 
+        {
+            "contents": "love.graphics.setColor($0)", 
+            "trigger": "love.graphics.setColor"
+        }, 
+        {
+            "contents": "love.graphics.setColorMode($0)", 
+            "trigger": "love.graphics.setColorMode"
+        }, 
+        {
+            "contents": "love.graphics.setFont($0)", 
+            "trigger": "love.graphics.setFont"
+        }, 
+        {
+            "contents": "love.graphics.setIcon($0)", 
+            "trigger": "love.graphics.setIcon"
+        }, 
+        {
+            "contents": "love.graphics.setLine($0)", 
+            "trigger": "love.graphics.setLine"
+        }, 
+        {
+            "contents": "love.graphics.setLineStipple($0)", 
+            "trigger": "love.graphics.setLineStipple"
+        }, 
+        {
+            "contents": "love.graphics.setLineStyle($0)", 
+            "trigger": "love.graphics.setLineStyle"
+        }, 
+        {
+            "contents": "love.graphics.setLineWidth($0)", 
+            "trigger": "love.graphics.setLineWidth"
+        }, 
+        {
+            "contents": "love.graphics.setMode($0)", 
+            "trigger": "love.graphics.setMode"
+        }, 
+        {
+            "contents": "love.graphics.setPoint($0)", 
+            "trigger": "love.graphics.setPoint"
+        }, 
+        {
+            "contents": "love.graphics.setPointSize($0)", 
+            "trigger": "love.graphics.setPointSize"
+        }, 
+        {
+            "contents": "love.graphics.setPointStyle($0)", 
+            "trigger": "love.graphics.setPointStyle"
+        }, 
+        {
+            "contents": "love.graphics.setRenderTarget($0)", 
+            "trigger": "love.graphics.setRenderTarget"
+        }, 
+        {
+            "contents": "love.graphics.setScissor($0)", 
+            "trigger": "love.graphics.setScissor"
+        }, 
+        {
+            "contents": "love.graphics.toggleFullscreen($0)", 
+            "trigger": "love.graphics.toggleFullscreen"
+        }, 
+        {
+            "contents": "love.graphics.translate($0)", 
+            "trigger": "love.graphics.translate"
+        }, 
+        {
+            "contents": "love.graphics.triangle($0)", 
+            "trigger": "love.graphics.triangle"
+        }, 
+        {
+            "contents": "love.image.newEncodedImageData($0)", 
+            "trigger": "love.image.newEncodedImageData"
+        }, 
+        {
+            "contents": "love.image.newImageData($0)", 
+            "trigger": "love.image.newImageData"
+        }, 
+        {
+            "contents": "love.joystick.close($0)", 
+            "trigger": "love.joystick.close"
+        }, 
+        {
+            "contents": "love.joystick.getAxes($0)", 
+            "trigger": "love.joystick.getAxes"
+        }, 
+        {
+            "contents": "love.joystick.getAxis($0)", 
+            "trigger": "love.joystick.getAxis"
+        }, 
+        {
+            "contents": "love.joystick.getBall($0)", 
+            "trigger": "love.joystick.getBall"
+        }, 
+        {
+            "contents": "love.joystick.getHat($0)", 
+            "trigger": "love.joystick.getHat"
+        }, 
+        {
+            "contents": "love.joystick.getName($0)", 
+            "trigger": "love.joystick.getName"
+        }, 
+        {
+            "contents": "love.joystick.getNumAxes($0)", 
+            "trigger": "love.joystick.getNumAxes"
+        }, 
+        {
+            "contents": "love.joystick.getNumBalls($0)", 
+            "trigger": "love.joystick.getNumBalls"
+        }, 
+        {
+            "contents": "love.joystick.getNumButtons($0)", 
+            "trigger": "love.joystick.getNumButtons"
+        }, 
+        {
+            "contents": "love.joystick.getNumHats($0)", 
+            "trigger": "love.joystick.getNumHats"
+        }, 
+        {
+            "contents": "love.joystick.getNumJoysticks($0)", 
+            "trigger": "love.joystick.getNumJoysticks"
+        }, 
+        {
+            "contents": "love.joystick.isDown($0)", 
+            "trigger": "love.joystick.isDown"
+        }, 
+        {
+            "contents": "love.joystick.isOpen($0)", 
+            "trigger": "love.joystick.isOpen"
+        }, 
+        {
+            "contents": "love.joystick.open($0)", 
+            "trigger": "love.joystick.open"
+        }, 
+        {
+            "contents": "love.keyboard.getKeyRepeat($0)", 
+            "trigger": "love.keyboard.getKeyRepeat"
+        }, 
+        {
+            "contents": "love.keyboard.isDown($0)", 
+            "trigger": "love.keyboard.isDown"
+        }, 
+        {
+            "contents": "love.keyboard.setKeyRepeat($0)", 
+            "trigger": "love.keyboard.setKeyRepeat"
+        }, 
+        {
+            "contents": "love.mouse.getPosition($0)", 
+            "trigger": "love.mouse.getPosition"
+        }, 
+        {
+            "contents": "love.mouse.getX($0)", 
+            "trigger": "love.mouse.getX"
+        }, 
+        {
+            "contents": "love.mouse.getY($0)", 
+            "trigger": "love.mouse.getY"
+        }, 
+        {
+            "contents": "love.mouse.isDown($0)", 
+            "trigger": "love.mouse.isDown"
+        }, 
+        {
+            "contents": "love.mouse.isGrabbed($0)", 
+            "trigger": "love.mouse.isGrabbed"
+        }, 
+        {
+            "contents": "love.mouse.isVisible($0)", 
+            "trigger": "love.mouse.isVisible"
+        }, 
+        {
+            "contents": "love.mouse.setGrab($0)", 
+            "trigger": "love.mouse.setGrab"
+        }, 
+        {
+            "contents": "love.mouse.setPosition($0)", 
+            "trigger": "love.mouse.setPosition"
+        }, 
+        {
+            "contents": "love.mouse.setVisible($0)", 
+            "trigger": "love.mouse.setVisible"
+        }, 
+        {
+            "contents": "love.physics.newBody($0)", 
+            "trigger": "love.physics.newBody"
+        }, 
+        {
+            "contents": "love.physics.newCircleShape($0)", 
+            "trigger": "love.physics.newCircleShape"
+        }, 
+        {
+            "contents": "love.physics.newDistanceJoint($0)", 
+            "trigger": "love.physics.newDistanceJoint"
+        }, 
+        {
+            "contents": "love.physics.newGearJoint($0)", 
+            "trigger": "love.physics.newGearJoint"
+        }, 
+        {
+            "contents": "love.physics.newMouseJoint($0)", 
+            "trigger": "love.physics.newMouseJoint"
+        }, 
+        {
+            "contents": "love.physics.newPolygonShape($0)", 
+            "trigger": "love.physics.newPolygonShape"
+        }, 
+        {
+            "contents": "love.physics.newPrismaticJoint($0)", 
+            "trigger": "love.physics.newPrismaticJoint"
+        }, 
+        {
+            "contents": "love.physics.newPulleyJoint($0)", 
+            "trigger": "love.physics.newPulleyJoint"
+        }, 
+        {
+            "contents": "love.physics.newRectangleShape($0)", 
+            "trigger": "love.physics.newRectangleShape"
+        }, 
+        {
+            "contents": "love.physics.newRevoluteJoint($0)", 
+            "trigger": "love.physics.newRevoluteJoint"
+        }, 
+        {
+            "contents": "love.physics.newWorld($0)", 
+            "trigger": "love.physics.newWorld"
+        }, 
+        {
+            "contents": "love.sound.newDecoder($0)", 
+            "trigger": "love.sound.newDecoder"
+        }, 
+        {
+            "contents": "love.sound.newSoundData($0)", 
+            "trigger": "love.sound.newSoundData"
+        }, 
+        {
+            "contents": "love.thread.getThread($0)", 
+            "trigger": "love.thread.getThread"
+        }, 
+        {
+            "contents": "love.thread.getThreads($0)", 
+            "trigger": "love.thread.getThreads"
+        }, 
+        {
+            "contents": "love.thread.newThread($0)", 
+            "trigger": "love.thread.newThread"
+        }, 
+        {
+            "contents": "love.timer.getDelta($0)", 
+            "trigger": "love.timer.getDelta"
+        }, 
+        {
+            "contents": "love.timer.getFPS($0)", 
+            "trigger": "love.timer.getFPS"
+        }, 
+        {
+            "contents": "love.timer.getMicroTime($0)", 
+            "trigger": "love.timer.getMicroTime"
+        }, 
+        {
+            "contents": "love.timer.getTime($0)", 
+            "trigger": "love.timer.getTime"
+        }, 
+        {
+            "contents": "love.timer.sleep($0)", 
+            "trigger": "love.timer.sleep"
+        }, 
+        {
+            "contents": "love.timer.step($0)", 
+            "trigger": "love.timer.step"
+        }, 
+        {
+            "contents": "love.draw($0)", 
+            "trigger": "love.draw"
+        }, 
+        {
+            "contents": "love.focus($0)", 
+            "trigger": "love.focus"
+        }, 
+        {
+            "contents": "love.joystickpressed($0)", 
+            "trigger": "love.joystickpressed"
+        }, 
+        {
+            "contents": "love.joystickreleased($0)", 
+            "trigger": "love.joystickreleased"
+        }, 
+        {
+            "contents": "love.keypressed($0)", 
+            "trigger": "love.keypressed"
+        }, 
+        {
+            "contents": "love.keyreleased($0)", 
+            "trigger": "love.keyreleased"
+        }, 
+        {
+            "contents": "love.load($0)", 
+            "trigger": "love.load"
+        }, 
+        {
+            "contents": "love.mousepressed($0)", 
+            "trigger": "love.mousepressed"
+        }, 
+        {
+            "contents": "love.mousereleased($0)", 
+            "trigger": "love.mousereleased"
+        }, 
+        {
+            "contents": "love.quit($0)", 
+            "trigger": "love.quit"
+        }, 
+        {
+            "contents": "love.run($0)", 
+            "trigger": "love.run"
+        }, 
+        {
+            "contents": "love.update($0)", 
+            "trigger": "love.update"
+        }
+    ], 
+    "scope": "source.lua.love"
+}
