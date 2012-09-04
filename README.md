@@ -27,5 +27,7 @@ Build system
 ------------
 To use the build command, the Love executable needs to be on your system PATH.  Then, go to Tools > Build System and select "Love".  Hit F7 or cmd+B to run your Love program.
 
+The build system will automatically be selected for lua files.
+
 Links
 =====
