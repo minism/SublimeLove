@@ -1,4 +1,5 @@
 {
-    "cmd": ["love", "$file_path"],
-    "selector": "source.lua.love"
+    "cmd": ["for depth in {0..5}; do if [ -f main.lua ]; then love .; fi; cd ..; done; ls"],
+    "selector": "source.lua.love",
+    "shell": true
 }
