@@ -19,6 +19,113 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>include</key>
+			<string>#functions</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#numeric-constant</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#string-single</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#string-double</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#love-pixel-effect</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#string-multiline</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#comment-block</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#comment-line</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#control-flow</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-constant</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-self</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-support</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-library</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-logic</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-operator</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#lua-love</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>comment-block</key>
+		<dict>
+			<key>begin</key>
+			<string>--\[(=*)\[</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.lua</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\]\1\]</string>
+			<key>name</key>
+			<string>comment.block.lua</string>
+		</dict>
+		<key>comment-line</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.lua</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(--)(?!\[\[).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.double-dash.lua</string>
+		</dict>
+		<key>control-flow</key>
+		<dict>
+			<key>match</key>
+			<string>\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in)\b</string>
+			<key>name</key>
+			<string>keyword.control.lua</string>
+		</dict>
+		<key>functions</key>
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -57,45 +164,100 @@
 			<key>name</key>
 			<string>meta.function.lua</string>
 		</dict>
+		<key>love-pixel-effect</key>
+		<dict>
+			<key>begin</key>
+			<string>(love\.graphics\.newPixelEffect)\(*\s*(?&lt;!--)(\[(=*)\[)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.library.lua.love</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.other.multiline.lua</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>C syntax highlighting for GLSL on newPixelEffect</string>
+			<key>end</key>
+			<string>(\]\])\)*</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.other.multiline.lua</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.c</string>
+				</dict>
+			</array>
+		</dict>
+		<key>lua-constant</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![^.]\.|:)\b(false|nil|true|_G|_VERSION|math\.(pi|huge))\b|(?&lt;![.])\.{3}(?!\.)</string>
+			<key>name</key>
+			<string>constant.language.lua</string>
+		</dict>
+		<key>lua-library</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![^.]\.|:)\b(coroutine\.(create|resume|running|status|wrap|yield)|string\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|rep|reverse|sub|upper)|table\.(concat|insert|maxn|remove|sort)|math\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?)|io\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\.(cpath|loaded|loadlib|path|preload|seeall)|debug\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|traceback))\b(?=[( {])</string>
+			<key>name</key>
+			<string>support.function.library.lua</string>
+		</dict>
+		<key>lua-logic</key>
+		<dict>
+			<key>match</key>
+			<string>\b(and|or|not)\b</string>
+			<key>name</key>
+			<string>keyword.operator.lua</string>
+		</dict>
+		<key>lua-love</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![^.]\.|:)\b(love\.(sound\.(newDecoder|newSoundData)|audio\.(setOrientation|play|getVolume|getVelocity|resume|newSource|getDistanceModel|rewind|getOrientation|stop|pause|getNumSources|setDistanceModel|setPosition|setVelocity|getPosition|setVolume)|thread\.(newThread|getThread|getThreads)|keyboard\.(getKeyRepeat|isDown|setKeyRepeat)|physics\.(newWheelJoint|newChainShape|setMeter|newGearJoint|newWeldJoint|newRectangleShape|newFrictionJoint|newPulleyJoint|newFixture|newEdgeShape|newWorld|newMouseJoint|newBody|newRevoluteJoint|getDistance|newPrismaticJoint|newPolygonShape|newRopeJoint|getMeter|newDistanceJoint|newCircleShape)|image\.(newEncodedImageData|newImageData)|filesystem\.(load|getUserDirectory|exists|mkdir|read|getWorkingDirectory|lines|isDirectory|remove|write|init|isFile|getLastModified|enumerate|getAppdataDirectory|newFileData|getSaveDirectory|setIdentity|setSource|newFile)|timer\.(getDelta|getTime|step|sleep|getFPS|getMicroTime)|graphics\.(getPointStyle|setDefaultImageFilter|setPointStyle|setMode|point|getMaxPointSize|newParticleSystem|printf|setColorMode|getMode|setStencil|getCaption|arc|translate|getBackgroundColor|setLineStyle|newStencil|setLineWidth|triangle|isSupported|newImageFont|scale|getPointSize|drawq|getColorMode|setScissor|toggleFullscreen|getHeight|setLine|hasFocus|newFont|newPixelEffect|setPoint|print|getModes|circle|setNewFont|rectangle|getScissor|draw|newScreenshot|getFont|getDefaultImageFilter|setPointSize|getColor|setBackgroundColor|setColorMask|getLineStipple|setBlendMode|isCreated|newSpriteBatch|setLineStipple|newFramebuffer|setInvertedStencil|quad|line|setCaption|present|polygon|checkMode|getWidth|rotate|setCanvas|newQuad|setPixelEffect|getPixelEffect|clear|setRenderTarget|newCanvas|getCanvas|getLineWidth|getBlendMode|shear|setFont|newImage|setColor|getLineStyle)|joystick\.(getNumAxes|isOpen|getAxis|getNumBalls|getName|getBall|getNumJoysticks|getNumHats|open|getHat|getNumButtons|close|isDown|getAxes)|font\.(newGlyphData|newRasterizer|newFontData)|mouse\.(getX|getY|isGrabbed|isVisible|setGrab|isDown|setVisible|setPosition|getPosition)|event\.(quit|clear|pump|push|poll|wait)))\b(?=[( {])</string>
+			<key>name</key>
+			<string>support.function.library.lua.love</string>
+		</dict>
+		<key>lua-operator</key>
+		<dict>
+			<key>match</key>
+			<string>\+|-|%|#|\*|\/|\^|==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2}(?!\.)</string>
+			<key>name</key>
+			<string>keyword.operator.lua</string>
+		</dict>
+		<key>lua-self</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![^.]\.|:)\b(self)\b</string>
+			<key>name</key>
+			<string>variable.language.self.lua</string>
+		</dict>
+		<key>lua-support</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![^.]\.|:)\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\b(?=[( {])</string>
+			<key>name</key>
+			<string>support.function.lua</string>
+		</dict>
+		<key>numeric-constant</key>
 		<dict>
 			<key>match</key>
 			<string>(?&lt;![\d.])\s0x[a-fA-F\d]+|\b\d+(\.\d+)?([eE]-?\d+)?|\.\d+([eE]-?\d+)?</string>
 			<key>name</key>
 			<string>constant.numeric.lua</string>
 		</dict>
-		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.lua</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>'</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.lua</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.single.lua</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.</string>
-					<key>name</key>
-					<string>constant.character.escape.lua</string>
-				</dict>
-			</array>
-		</dict>
+		<key>string-double</key>
 		<dict>
 			<key>begin</key>
 			<string>"</string>
@@ -129,6 +291,7 @@
 				</dict>
 			</array>
 		</dict>
+		<key>string-multiline</key>
 		<dict>
 			<key>begin</key>
 			<string>(?&lt;!--)\[(=*)\[</string>
@@ -153,88 +316,44 @@
 			<key>name</key>
 			<string>string.quoted.other.multiline.lua</string>
 		</dict>
+		<key>string-single</key>
 		<dict>
 			<key>begin</key>
-			<string>--\[(=*)\[</string>
-			<key>captures</key>
+			<string>'</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.lua</string>
+					<string>punctuation.definition.string.begin.lua</string>
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\]\1\]</string>
-			<key>name</key>
-			<string>comment.block.lua</string>
-		</dict>
-		<dict>
-			<key>captures</key>
+			<string>'</string>
+			<key>endCaptures</key>
 			<dict>
-				<key>1</key>
+				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.lua</string>
+					<string>punctuation.definition.string.end.lua</string>
 				</dict>
 			</dict>
-			<key>match</key>
-			<string>(--)(?!\[\[).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.double-dash.lua</string>
+			<string>string.quoted.single.lua</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.lua</string>
+				</dict>
+			</array>
 		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in)\b</string>
-			<key>name</key>
-			<string>keyword.control.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(false|nil|true|_G|_VERSION|math\.(pi|huge))\b|(?&lt;![.])\.{3}(?!\.)</string>
-			<key>name</key>
-			<string>constant.language.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(self)\b</string>
-			<key>name</key>
-			<string>variable.language.self.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\b(?=[( {])</string>
-			<key>name</key>
-			<string>support.function.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(coroutine\.(create|resume|running|status|wrap|yield)|string\.(byte|char|dump|find|format|gmatch|gsub|len|lower|match|rep|reverse|sub|upper)|table\.(concat|insert|maxn|remove|sort)|math\.(abs|acos|asin|atan2?|ceil|cosh?|deg|exp|floor|fmod|frexp|ldexp|log|log10|max|min|modf|pow|rad|random|randomseed|sinh?|sqrt|tanh?)|io\.(close|flush|input|lines|open|output|popen|read|tmpfile|type|write)|os\.(clock|date|difftime|execute|exit|getenv|remove|rename|setlocale|time|tmpname)|package\.(cpath|loaded|loadlib|path|preload|seeall)|debug\.(debug|[gs]etfenv|[gs]ethook|getinfo|[gs]etlocal|[gs]etmetatable|getregistry|[gs]etupvalue|traceback))\b(?=[( {])</string>
-			<key>name</key>
-			<string>support.function.library.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(and|or|not)\b</string>
-			<key>name</key>
-			<string>keyword.operator.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\+|-|%|#|\*|\/|\^|==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2}(?!\.)</string>
-			<key>name</key>
-			<string>keyword.operator.lua</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(love\.(sound\.(newDecoder|newSoundData)|audio\.(setOrientation|play|getVolume|getVelocity|resume|newSource|stop|rewind|getOrientation|pause|getNumSources|setPosition|setVelocity|getPosition|setVolume)|thread\.(newThread|getThread|getThreads)|keyboard\.(getKeyRepeat|isDown|setKeyRepeat)|physics\.(newRectangleShape|newGearJoint|newPulleyJoint|newWorld|newMouseJoint|newBody|newRevoluteJoint|newPrismaticJoint|newPolygonShape|newDistanceJoint|newCircleShape)|image\.(newEncodedImageData|newImageData)|filesystem\.(load|getUserDirectory|exists|mkdir|read|getWorkingDirectory|lines|isDirectory|remove|write|init|isFile|getLastModified|enumerate|getAppdataDirectory|newFileData|getSaveDirectory|setIdentity|setSource|newFile)|timer\.(getDelta|getTime|step|sleep|getFPS|getMicroTime)|graphics\.(getPointStyle|setMode|point|getMaxPointSize|newParticleSystem|printf|setColorMode|pop|getWidth|setFont|getBackgroundColor|setLineStyle|setLineWidth|triangle|setPointSize|newImageFont|scale|getPointSize|drawq|getColorMode|setScissor|getHeight|setLine|newQuad|newFont|setPoint|print|getModes|circle|translate|setIcon|rectangle|getScissor|reset|draw|newScreenshot|getFont|toggleFullscreen|getColor|setBackgroundColor|getLineStipple|setBlendMode|isCreated|newSpriteBatch|setLineStipple|newFramebuffer|quad|line|setCaption|present|polygon|checkMode|getCaption|rotate|setPointStyle|setColor|clear|setRenderTarget|getLineWidth|getBlendMode|push|newImage|getLineStyle)|joystick\.(getNumAxes|isOpen|getAxis|getNumBalls|getName|getBall|getNumJoysticks|getNumHats|open|getHat|getNumButtons|close|isDown|getAxes)|font\.(newGlyphData|newRasterizer|newFontData)|mouse\.(getX|getY|isGrabbed|isVisible|setGrab|isDown|setVisible|setPosition|getPosition)|event\.(push|clear|poll|pump|wait)))\b(?=[( {])</string>
-			<key>name</key>
-			<string>support.function.library.lua.love</string>
-		</dict>
-	</array>
+	</dict>
 	<key>scopeName</key>
 	<string>source.lua.love</string>
 	<key>uuid</key>
-	<string>86A2712F-D1D2-4AB3-8788-B4A6B6215005</string>
+	<string>86a2712f-d1d2-4ab3-8788-b4a6b6215005</string>
 </dict>
 </plist>
