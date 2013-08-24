@@ -1,5 +1,5 @@
 {
-    "cmd": ["for depth in {0..5}; do if [ -f main.lua ]; then love .; fi; cd ..; done; ls"],
+    "cmd": ["for depth in {0..5}; do if [ -f main.lua ]; then love .; fi; cd ..; done"],
     "selector": "source.lua.love",
     "shell": true
 }
