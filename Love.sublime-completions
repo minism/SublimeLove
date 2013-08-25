@@ -13,12 +13,8 @@
             "trigger": "love.physics.setMeter"
         },
         {
-            "contents": "love.graphics.getLineStipple($0)",
-            "trigger": "love.graphics.getLineStipple"
-        },
-        {
-            "contents": "love.graphics.setPointSize(${1:size})",
-            "trigger": "love.graphics.setPointSize"
+            "contents": "love.timer.getMicroTime($0)",
+            "trigger": "love.timer.getMicroTime"
         },
         {
             "contents": "love.joystick.getNumBalls(${1:joystick})",
@@ -45,7 +41,11 @@
             "trigger": "love.timer.getDelta"
         },
         {
-            "contents": "love.physics.newDistanceJoint($0)",
+            "contents": "love.graphics.push($0)",
+            "trigger": "love.graphics.push"
+        },
+        {
+            "contents": "love.physics.newDistanceJoint(${1:body1}, ${2:body2}, ${3:x1}, ${4:y1}, ${5:x2}, ${6:y2}, ${7:collideConnected})",
             "trigger": "love.physics.newDistanceJoint"
         },
         {
@@ -59,10 +59,6 @@
         {
             "contents": "love.keyboard.isDown($0)",
             "trigger": "love.keyboard.isDown"
-        },
-        {
-            "contents": "love.image.newEncodedImageData(${1:imageData}, ${2:format})",
-            "trigger": "love.image.newEncodedImageData"
         },
         {
             "contents": "love.physics.newFixture(${1:body}, ${2:shape}, ${3:density})",
@@ -113,10 +109,6 @@
             "trigger": "love.graphics.getHeight"
         },
         {
-            "contents": "love.timer.getMicroTime($0)",
-            "trigger": "love.timer.getMicroTime"
-        },
-        {
             "contents": "love.update(${1:dt})",
             "trigger": "love.update"
         },
@@ -125,7 +117,11 @@
             "trigger": "love.graphics.setLineStyle"
         },
         {
-            "contents": "love.graphics.setMode($0)",
+            "contents": "love.graphics.reset($0)",
+            "trigger": "love.graphics.reset"
+        },
+        {
+            "contents": "love.graphics.setMode(${1:width}, ${2:height}, ${3:fullscreen}, ${4:vsync}, ${5:fsaa})",
             "trigger": "love.graphics.setMode"
         },
         {
@@ -133,7 +129,7 @@
             "trigger": "love.graphics.getColor"
         },
         {
-            "contents": "love.physics.newBody($0)",
+            "contents": "love.physics.newBody(${1:world}, ${2:x}, ${3:y}, ${4:type})",
             "trigger": "love.physics.newBody"
         },
         {
@@ -141,8 +137,8 @@
             "trigger": "love.graphics.getPixelEffect"
         },
         {
-            "contents": "love.graphics.setColorMask(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})",
-            "trigger": "love.graphics.setColorMask"
+            "contents": "love.graphics.setPointSize(${1:size})",
+            "trigger": "love.graphics.setPointSize"
         },
         {
             "contents": "love.filesystem.getSaveDirectory($0)",
@@ -157,7 +153,7 @@
             "trigger": "love.audio.getVelocity"
         },
         {
-            "contents": "love.physics.newRevoluteJoint($0)",
+            "contents": "love.physics.newRevoluteJoint(${1:body1}, ${2:body2}, ${3:x}, ${4:y}, ${5:collideConnected})",
             "trigger": "love.physics.newRevoluteJoint"
         },
         {
@@ -185,7 +181,7 @@
             "trigger": "love.graphics.rectangle"
         },
         {
-            "contents": "love.graphics.setFont($0)",
+            "contents": "love.graphics.setFont(${1:font})",
             "trigger": "love.graphics.setFont"
         },
         {
@@ -197,7 +193,7 @@
             "trigger": "love.audio.setDistanceModel"
         },
         {
-            "contents": "love.audio.setOrientation(${1:fx}, ${2:}, ${3:ux}, ${4:})",
+            "contents": "love.audio.setOrientation(${1:fx}, ${2:fy}, ${3:fz}, ${4:ux}, ${5:uy}, ${6:uz})",
             "trigger": "love.audio.setOrientation"
         },
         {
@@ -225,8 +221,8 @@
             "trigger": "love.mouse.getX"
         },
         {
-            "contents": "love.mouse.getY($0)",
-            "trigger": "love.mouse.getY"
+            "contents": "love.graphics.setIcon(${1:image})",
+            "trigger": "love.graphics.setIcon"
         },
         {
             "contents": "love.mousepressed(${1:x}, ${2:y}, ${3:button})",
@@ -241,12 +237,16 @@
             "trigger": "love.physics.newRopeJoint"
         },
         {
-            "contents": "love.physics.newGearJoint($0)",
+            "contents": "love.physics.newGearJoint(${1:joint1}, ${2:joint2}, ${3:ratio}, ${4:collideConnected})",
             "trigger": "love.physics.newGearJoint"
         },
         {
             "contents": "love.joystickreleased(${1:joystick}, ${2:button})",
             "trigger": "love.joystickreleased"
+        },
+        {
+            "contents": "love.graphics.pop($0)",
+            "trigger": "love.graphics.pop"
         },
         {
             "contents": "love.filesystem.exists(${1:filename})",
@@ -255,10 +255,6 @@
         {
             "contents": "love.load(${1:arg})",
             "trigger": "love.load"
-        },
-        {
-            "contents": "love.font.newFontData(${1:rasterizer})",
-            "trigger": "love.font.newFontData"
         },
         {
             "contents": "love.graphics.setPoint(${1:size}, ${2:style})",
@@ -289,7 +285,7 @@
             "trigger": "love.joystick.getName"
         },
         {
-            "contents": "love.graphics.draw(${1:drawable}, ${2:x}, ${3:y}, ${4:r}, ${5:sx}, ${6:sy}, ${7:ox}, ${8:oy})",
+            "contents": "love.graphics.draw(${1:drawable}, ${2:x}, ${3:y}, ${4:r}, ${5:sx}, ${6:sy}, ${7:ox}, ${8:oy}, ${9:kx}, ${10:ky})",
             "trigger": "love.graphics.draw"
         },
         {
@@ -357,15 +353,15 @@
             "trigger": "love.audio.stop"
         },
         {
-            "contents": "love.graphics.setLineStipple(${1:pattern}, ${2:repeat})",
-            "trigger": "love.graphics.setLineStipple"
+            "contents": "love.joystick.open(${1:joystick})",
+            "trigger": "love.joystick.open"
         },
         {
-            "contents": "love.physics.newPulleyJoint($0)",
+            "contents": "love.physics.newPulleyJoint(${1:body1}, ${2:body2}, ${3:gx1}, ${4:gy1}, ${5:gx2}, ${6:gy2}, ${7:x1}, ${8:y1}, ${9:x2}, ${10:y2}, ${11:ratio}, ${12:collideConnected})",
             "trigger": "love.physics.newPulleyJoint"
         },
         {
-            "contents": "love.graphics.newPixelEffect($0)",
+            "contents": "love.graphics.newPixelEffect(${1:code})",
             "trigger": "love.graphics.newPixelEffect"
         },
         {
@@ -409,16 +405,16 @@
             "trigger": "love.joystick.isOpen"
         },
         {
+            "contents": "love.errhand(${1:msg})",
+            "trigger": "love.errhand"
+        },
+        {
             "contents": "love.keyreleased(${1:key})",
             "trigger": "love.keyreleased"
         },
         {
             "contents": "love.event.pump($0)",
             "trigger": "love.event.pump"
-        },
-        {
-            "contents": "love.graphics.newFramebuffer($0)",
-            "trigger": "love.graphics.newFramebuffer"
         },
         {
             "contents": "love.joystick.getHat(${1:joystick}, ${2:hat})",
@@ -451,6 +447,10 @@
         {
             "contents": "love.event.clear($0)",
             "trigger": "love.event.clear"
+        },
+        {
+            "contents": "love.mouse.setGrab(${1:grab})",
+            "trigger": "love.mouse.setGrab"
         },
         {
             "contents": "love.filesystem.isDirectory(${1:filename})",
@@ -545,8 +545,8 @@
             "trigger": "love.audio.rewind"
         },
         {
-            "contents": "love.mouse.setGrab(${1:grab})",
-            "trigger": "love.mouse.setGrab"
+            "contents": "love.mouse.getY($0)",
+            "trigger": "love.mouse.getY"
         },
         {
             "contents": "love.joystick.getNumHats(${1:joystick})",
@@ -581,7 +581,7 @@
             "trigger": "love.graphics.getPointStyle"
         },
         {
-            "contents": "love.timer.sleep($0)",
+            "contents": "love.timer.sleep(${1:s})",
             "trigger": "love.timer.sleep"
         },
         {
@@ -621,10 +621,6 @@
             "trigger": "love.audio.getNumSources"
         },
         {
-            "contents": "love.joystick.open(${1:joystick})",
-            "trigger": "love.joystick.open"
-        },
-        {
             "contents": "love.joystick.getNumJoysticks($0)",
             "trigger": "love.joystick.getNumJoysticks"
         },
@@ -645,7 +641,7 @@
             "trigger": "love.filesystem.mkdir"
         },
         {
-            "contents": "love.graphics.print(${1:text}, ${2:x}, ${3:y}, ${4:r}, ${5:sx}, ${6:sy}, ${7:ox}, ${8:oy})",
+            "contents": "love.graphics.print(${1:text}, ${2:x}, ${3:y}, ${4:r}, ${5:sx}, ${6:sy}, ${7:ox}, ${8:oy}, ${9:kx}, ${10:ky})",
             "trigger": "love.graphics.print"
         },
         {
@@ -689,7 +685,7 @@
             "trigger": "love.timer.getTime"
         },
         {
-            "contents": "love.physics.newPolygonShape($0)",
+            "contents": "love.physics.newPolygonShape(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2}, ${5:x3}, ${6:y3})",
             "trigger": "love.physics.newPolygonShape"
         },
         {
@@ -699,10 +695,6 @@
         {
             "contents": "love.mouse.setVisible(${1:visible})",
             "trigger": "love.mouse.setVisible"
-        },
-        {
-            "contents": "love.graphics.setRenderTarget($0)",
-            "trigger": "love.graphics.setRenderTarget"
         },
         {
             "contents": "love.graphics.getWidth($0)",
@@ -761,7 +753,7 @@
             "trigger": "love.graphics.point"
         },
         {
-            "contents": "love.event.push(${1:e}, ${2:a}, ${3:b}, ${4:c})",
+            "contents": "love.event.push(${1:e}, ${2:a}, ${3:b}, ${4:c}, ${5:d})",
             "trigger": "love.event.push"
         },
         {

@@ -1,4 +1,5 @@
 love.draw
+love.errhand,msg
 love.focus,f
 love.joystickpressed,joystick,button
 love.joystickreleased,joystick,button
