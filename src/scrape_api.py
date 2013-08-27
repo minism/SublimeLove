@@ -141,6 +141,9 @@ def get_function_arguments(api_version, function_name):
                               params[1].value.filter_templates()]
                     for t in t_args:
                         args = args + extract_args(t)
+            elif name == "subparam":
+                # Don't support subparams
+                pass
             else:
                 raise Exception("Unsupported template: %s" % name)
         all_args.append(args)
