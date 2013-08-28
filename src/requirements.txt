@@ -1,0 +1,3 @@
+# Needed for scrape_api.py
+simplejson
+mwparserfromhell
