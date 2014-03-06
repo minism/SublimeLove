@@ -11,8 +11,8 @@ import os
 
 # data files
 dirname = os.path.dirname(__file__)
-api = os.path.join(dirname,'src/api.txt')
-callbacks = os.path.join(dirname,'src/callbacks.txt')
+api = os.path.join(dirname,'src','api.txt')
+callbacks = os.path.join(dirname,'src','callbacks.txt')
 
 fh = open(api)
 api_list = [line.strip().split(',') for line in fh.read().split() if line]
