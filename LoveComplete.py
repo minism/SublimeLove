@@ -63,32 +63,44 @@ for fn in api_list:
     fn_completions[lib].append((name + "(" + ", ".join(fn) + ")", fn_split[2] + "(" + arg_str + ")"))
 
 
-
+def is_love_lua(view):
+    return '/Love.tmLanguage' in view.settings().get('syntax')
 
 class LoveComplete(sublime_plugin.EventListener):
     def on_query_completions(self, view, prefix, locations):
-        if '.lua' in view.file_name():
+        if is_love_lua(view):
             location = locations[0]
-            word = view.substr(location-1)
+            # this was a good way to detect libraries and stuff at the time
+            # but I realized that it's not very modular or scalable
+            # this whole part needs to be rethought over, but for now it works.
             lib = view.substr(view.word(location-1))
-            preword = view.substr(location-1-len(lib)-1)
+            word = view.substr(view.word(location-1).b)
+            preword = view.substr(view.word(location-1-len(lib)-1).b)
             prelib = view.substr(view.word(location-1-len(lib)-1))
+            prepreword = view.substr(view.word(location-1-len(lib)-1-len(prelib)-1).b)
+            preprelib = view.substr(view.word(location-1-len(lib)-1-len(prelib)-1))
+
+            print(word, lib, preword, prelib, prepreword, preprelib)
 
             if word == ".":
-                if preword != ".":
-                    if lib == "love":
-                        return lib_completions
-                        # completions = list(set([
-                        #     ("love.graphics", "love.graphics")
-                        # ]))
-                        # return completions
-                elif prelib == "love":
-                    if fn_completions[lib]:
-                        return fn_completions[lib]
-                    # if lib == "graphics":
-                    #     return fn_completions
-                        # completions = list(set([
-                        #     ("love.graphics.printf()", "printf(${1:text}, ${2:x}, ${3:y}, ${4:limit}, ${5:align})"),
-                        #     ("love.graphics.setColor(r, g, b, a)", "setColor(${1:number r}, ${2:number g}, ${3:number b})")
-                        # ]))
-                        # return completions
+                if preword != "." and lib == "love":
+                    return lib_completions
+                elif prelib == "love" and fn_completions[lib]:
+                    return fn_completions[lib]
+            elif lib in "love" and preword != ".":
+                return [("love", "love")]
+            else:
+                if preword == ".":
+                    if prelib == "love":
+                        ret = []
+                        for completion_a, completion_b in lib_completions:
+                            if lib in completion_b:
+                                ret.append((completion_a, completion_b))
+                        return ret
+                    elif prepreword == "." and preprelib == "love" and fn_completions[prelib] and preword == ".":
+                        ret = []
+                        for completion_a, completion_b in fn_completions[prelib]:
+                            if lib in completion_b:
+                                ret.append((completion_a, completion_b))
+                        return ret
+
