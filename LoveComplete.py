@@ -80,8 +80,6 @@ class LoveComplete(sublime_plugin.EventListener):
             prepreword = view.substr(view.word(location-1-len(lib)-1-len(prelib)-1).b)
             preprelib = view.substr(view.word(location-1-len(lib)-1-len(prelib)-1))
 
-            print(word, lib, preword, prelib, prepreword, preprelib)
-
             if word == ".":
                 if preword != "." and lib == "love":
                     return lib_completions
