@@ -1,7 +1,7 @@
 love.draw
 love.errhand,msg
 love.focus,f
-love.gamepadaxis,joystick,axis
+love.gamepadaxis,joystick,axis,value
 love.gamepadpressed,joystick,button
 love.gamepadreleased,joystick,button
 love.joystickadded,joystick
@@ -14,6 +14,7 @@ love.keypressed,key,isrepeat
 love.keyreleased,key
 love.load,arg
 love.mousefocus,f
+love.mousemoved,x,y,dx,dy
 love.mousepressed,x,y,button
 love.mousereleased,x,y,button
 love.quit
