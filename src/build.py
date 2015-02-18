@@ -61,20 +61,21 @@ def main():
             api_args[api_call] = []
 
     # Build completions file
-    completions = []
-    for call, args in api_args.iteritems():
-        arguments = ["${%s:%s}" % (i + 1, arg) for (i, arg) in enumerate(args)]
-        completions.append({
-            'trigger': call,
-            'contents': '%s(%s)' % (call, ', '.join(arguments) if len(arguments) != 0 else "$0"),
-        })
-    fh = open(completions_out, 'w')
-    simplejson.dump({
-        'scope': scopeName,
-        'completions': completions,
-    }, fh, sort_keys=True, indent=4)
-    fh.close()
-    print 'Created %s' % completions_out
+    # Removed for now, as completions are provided by LoveComplete.py.
+    # completions = []
+    # for call, args in api_args.iteritems():
+    #     arguments = ["${%s:%s}" % (i + 1, arg) for (i, arg) in enumerate(args)]
+    #     completions.append({
+    #         'trigger': call,
+    #         'contents': '%s(%s)' % (call, ', '.join(arguments) if len(arguments) != 0 else "$0"),
+    #     })
+    # fh = open(completions_out, 'w')
+    # simplejson.dump({
+    #     'scope': scopeName,
+    #     'completions': completions,
+    # }, fh, sort_keys=True, indent=4)
+    # fh.close()
+    # print 'Created %s' % completions_out
 
 if __name__ == '__main__':
     main()
